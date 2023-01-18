@@ -1,0 +1,15 @@
+div.hide {
+  white-space: pre;
+  font-family: monospace;
+}
+
+textarea.hide {
+  border: 0.1rem cyan solid;
+  margin: 0.1rem;
+  padding: 0.6rem;
+  font-family: monospace;
+
+  overflow-y: hidden;
+
+  box-sizing: border-box;
+}
