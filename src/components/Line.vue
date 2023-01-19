@@ -47,9 +47,9 @@ onMounted(() => {
 
 <template>
   <div class="line" :class="{ 'last-line': isTmp && !isFirst }">
-    <input class="line-input name-input" ref="nameInputEle" v-model="nameValue" @keyup="updateLinesCount" @input="updateSize" />
+    <input class="name-input" ref="nameInputEle" v-model="nameValue" @keyup="updateLinesCount" @input="updateSize" />
     <span class="equal"> = </span>
-    <textarea class="line-input expression-input" ref="expressionTextareaEle" v-model="expressionValue" @keyup="updateLinesCount" @input="updateSize" />
+    <textarea class="expression-textarea" ref="expressionTextareaEle" v-model="expressionValue" @keyup="updateLinesCount" @input="updateSize" />
   </div>
 </template>
 
@@ -74,7 +74,8 @@ onMounted(() => {
   margin: 0 0.2rem;
 }
 
-.line-input {
+.name-input,
+.expression-textarea {
   border: 0.1rem cyan solid;
   margin: 0.1rem;
   padding: 0.6rem;
@@ -82,9 +83,10 @@ onMounted(() => {
   font-family: monospace;
 }
 
-.expression-input {
+.expression-textarea {
   flex: 1;
   resize: none;
   overflow-y: hidden;
+  max-width: none;
 }
 </style>
